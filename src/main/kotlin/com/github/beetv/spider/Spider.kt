@@ -1,8 +1,7 @@
 package com.github.beetv.spider
 
 interface Spider {
-    suspend fun fetchCategories(): List<Category>
-    suspend fun fetchMediaGroups(categoryId: String): List<MediaGroup>
+    suspend fun fetchMediaGroups(): List<MediaGroup>
     suspend fun fetchMediaDetail(mediaId: String): MediaDetail
     suspend fun fetchMediaUrl(sourceId: String): String
 }
