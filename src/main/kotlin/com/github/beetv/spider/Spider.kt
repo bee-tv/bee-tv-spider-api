@@ -33,7 +33,7 @@ data class MediaDetail(
 )
 
 data class MediaGroup(
-    val category: Category,
+    val title: String,
     val medias: List<Media>
 )
 
