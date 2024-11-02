@@ -2,7 +2,7 @@ package com.github.beetv.spider
 
 interface Spider {
     suspend fun fetchCategories(): List<Category>
-    suspend fun fetchCategoryMedias(): List<CategoryMedia>
+    suspend fun fetchMediaGroups(categoryId: String): List<MediaGroup>
     suspend fun fetchMediaDetail(mediaId: String): MediaDetail
     suspend fun fetchMediaUrl(sourceId: String): String
 }
@@ -33,7 +33,7 @@ data class MediaDetail(
     val profiles: Map<String, String> = emptyMap(),
 )
 
-data class CategoryMedia(
+data class MediaGroup(
     val category: Category,
     val medias: List<Media>
 )
